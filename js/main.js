@@ -1,5 +1,5 @@
 var numbersList;
-var movesLeft;
+var movesMade;
 var time;
 var seconds;
 var minutes;
@@ -52,8 +52,8 @@ function restart() {
 
   startClock();
 
-  movesLeft = 20;
-  $('#moves_left').html(movesLeft);
+  movesMade = 0;
+  $('#moves_made').html(movesMade);
 
   setRating();
   $('#rating').html(text);
@@ -80,8 +80,8 @@ function shuffle() {
 // this function will check if last two clicked cards are a match
 function checkMatch() {
   if ($('.selected').length == 2) {
-    movesLeft--;
-    $('#moves_left').html(movesLeft);
+    movesMade++;
+    $('#moves_made').html(movesMade);
 
     setRating();
     $('#rating').html(text);
@@ -131,9 +131,9 @@ function stopClock() {
 }
 
 function setRating() {
-  if (movesLeft >= 10) {
+  if (movesMade <= 10) {
     text = '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
-  } else if (movesLeft >= 5) {
+  } else if (movesMade <= 15) {
     text = '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
   } else {
     text = '<i class="fa fa-star" aria-hidden="true"></i>';
