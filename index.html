@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Link to Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Spectral+SC|Cabin+Sketch|Orbitron" rel="stylesheet">
+
+  <!--  Link to font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Custom CSS file -->
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Udacity - Memory Game</title>
+</head>
+<body>
+
+  <header class="top"> <!-- Start - Header -->
+    <h1>Udacity - Memory Game</h1>
+    <h4>Total Moves Left: <span id="moves_left"></span></h4>
+    <div class="score_card">
+      <div>
+        <i class="fa fa-clock-o" aria-hidden="true"></i> <span id="time">00:00</span>
+      </div>
+      <div>
+        <span id="rating"></span>
+      </div>
+      <div>
+        <i id="restart" class="fa fa-refresh" aria-hidden="true"></i>
+      </div>
+    </div>
+  </header> <!-- End Header -->
+
+  <section id="cards" class="container">   <!-- Start main section -->
+  </section> <!-- Start main section -->
+
+  <section class="modal modal_hide"> <!-- Start popup modal -->
+    <i id="close_modal" class="fa fa-times" aria-hidden="true"></i>
+    <h4 id="modal_message"></h4>
+    <h4>Time taken to finish: <span id="finish_time"></span></h4>
+    <h4>Your rating: <span id="final_rating"></span></h4>
+    <i id="restart_modal" class="fa fa-refresh" aria-hidden="true"></i>
+  </section> <!-- End popup modal-->
+
+  <!-- JQuery javascript library link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Custom Javascript file link-->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

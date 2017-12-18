@@ -1,0 +1,187 @@
+
+/* General CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spectral SC', serif;
+  margin: 20px;
+}
+
+h1, h4 {
+margin: 5px 0;
+}
+
+h1 {
+  font-size: 25px;
+  font-family: "Cabin Sketch", serif;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+/* header */
+
+.top {
+  box-sizing: content-box;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.score_card {
+  margin-bottom: 5px;
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+.score_card div {
+  display: inline;
+  padding: 0px 20px;
+}
+
+#restart:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+#time {
+  font-family: 'Orbitron', serif;
+}
+/*  Main container */
+.container {
+  background-color: #3CB371;
+  width: 480px;
+  min-height: 480px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  background-color: #2F4F4F;
+  float: left;
+  margin: 10px;
+  color: #ddd;
+  font-size: 30px;
+  border-radius: 3px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  border: 2px solid #ccc;
+  transition: all 0.25s ease-in-out;
+}
+
+.match {
+  background-color: #fff;
+}
+
+.selected {
+  opacity: 0.5;
+}
+
+/*  Modal */
+.modal {
+  top: 30%;
+  left: 30%;
+  background-color: grey;
+  border: 2px solid orange;
+  color: #fff;
+  position: fixed;
+  padding: 30px;
+  width: 40%;
+  min-height: 25%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.modal_hide {
+  display: none;
+}
+
+#close_modal {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: red;
+}
+
+#restart_modal:hover {
+  cursor: pointer;
+}
+
+.opacity {
+  opacity: 0.3;
+}
+
+
+/* Apply styles starting from medium devices and up to extra large devices */
+@media (min-width: 321px) and (max-width: 767px) {
+
+body {
+  background-color: #ccc;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+.container {
+  width: 400px;
+  min-height: 400px;
+
+}
+
+.card {
+  height: 80px;
+  width: 80px;
+  font-size: 20px;
+}
+.modal {
+  width: 70%;
+  left: 15%;
+}
+
+.modal > h4 {
+  font-size: 15px;
+}
+
+#restart_modal {
+  width: 50px;
+  heigth: 50px;
+}
+}
+
+/* Apply styles starting from medium devices and up to extra large devices */
+@media (min-width: 768px) and (max-width: 1199px) {
+body {
+  background-color: #ddd;
+}
+
+.modal {
+  width: 50%;
+  left: 25%;
+}
+
+}
+
+/* Apply styles starting from medium devices and up to extra large devices */
+@media (min-width: 1200px) {
+body {
+  background-color: #eee;
+}
+}
