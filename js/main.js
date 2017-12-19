@@ -1,10 +1,10 @@
-var numbersList;
-var movesMade;
-var time;
-var seconds;
-var minutes;
-var timerInterval;
-var text;
+let numbersList;
+let movesMade;
+let time;
+let seconds;
+let minutes;
+let timerInterval;
+let text;
 
 $(document).ready(function() {
   restart();
@@ -46,7 +46,7 @@ function restart() {
 
   shuffle();
 
-  for (var i = 0; i < 16; i++) {
+  for (let i = 0; i < 16; i++) {
     $('#cards').append('<div class="card" data-card-value="' + numbersList[i]+ '"></div>');
   }
 
@@ -69,7 +69,7 @@ function restart() {
 
 // this function will shuffle all the cards
 function shuffle() {
-  for (var i = 0; i < numbersList.length; i++ ) {
+  for (let i = 0; i < numbersList.length; i++ ) {
     randomNumber = Math.round(Math.random()*i);
     temp = numbersList[i];
     numbersList[i] = numbersList[randomNumber];
